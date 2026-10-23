@@ -1,0 +1,20 @@
+// ===== Unidad 2: LESS (variables, mixins, nesting, operaciones) =====
+@ink: #111;
+@paper: #fff;
+@accent: #ff5a1f;
+@radius: 999px;
+@gap: 1rem;
+
+.pill(@bg: @paper) { border-radius: @radius; background: @bg; }
+
+.newsletter {
+  background: @accent; color: @paper; padding: @gap * 4 @gap * 1.25;
+  display: grid; gap: @gap; justify-items: center; text-align: center;
+  h2 { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); text-transform: uppercase; }
+  &__form {
+    display: flex; flex-wrap: wrap; gap: @gap / 2; justify-content: center; width: 100%; max-width: 520px;
+    input { .pill(); flex: 1 1 220px; border: 0; padding: .9rem 1.25rem; font-size: 1rem; }
+    .btn { background: @ink; color: @paper; border-radius: @radius; padding: .9rem 2rem; border: 0; cursor: pointer; font-weight: 600; }
+    .btn:hover { background: darken(@ink, 10%); }
+  }
+}

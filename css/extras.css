@@ -1,0 +1,42 @@
+.newsletter {
+  background: #ff5a1f;
+  color: #fff;
+  padding: 4rem 1.25rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+}
+.newsletter h2 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+}
+.newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem / 2;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+.newsletter__form input {
+  border-radius: 999px;
+  background: #fff;
+  flex: 1 1 220px;
+  border: 0;
+  padding: 0.9rem 1.25rem;
+  font-size: 1rem;
+}
+.newsletter__form .btn {
+  background: #111;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.9rem 2rem;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.newsletter__form .btn:hover {
+  background: #000000;
+}

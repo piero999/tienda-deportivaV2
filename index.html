@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VELOZ | Tienda deportiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/extras.css">
+</head>
+<body>
+  <header class="nav">
+    <input type="checkbox" id="menu-toggle" class="nav__toggle">
+    <label for="menu-toggle" class="nav__burger" aria-label="Abrir menú"><span></span></label>
+    <a class="nav__logo" href="#">VELOZ</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#novedades">Novedades</a>
+      <a href="#hombre">Hombre</a>
+      <a href="#mujer">Mujer</a>
+      <a href="#ninos">Niños</a>
+      <a href="#ofertas" class="is-sale">Ofertas</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar">🔍<span class="hide-sm"> Buscar</span></button>
+      <button class="icon-btn" id="cartBtn" aria-label="Carrito">🛍<span class="hide-sm"> Carrito</span> <b class="badge" id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Destacados">
+      <div class="slides" id="slides">
+      <article class="slide is-active">
+        <img class="slide__media" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80" srcset="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80 1400w, https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=2000&q=80 2000w" sizes="100vw" alt="Zapatilla deportiva roja">
+        <div class="slide__text">
+          <p class="hero__tag">Colección Otoño 2026</p>
+          <h2 class="slide__title">Corre más<br>allá de<br>tu límite</h2>
+          <a class="btn btn--light" href="#novedades">Comprar novedades</a>
+        </div>
+      </article>
+      <article class="slide">
+        <img class="slide__media" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80" alt="">
+        <video class="slide__media" autoplay muted loop playsinline preload="metadata">
+          <source src="video/hero.mp4" type="video/mp4">
+        </video>
+        <div class="slide__text">
+          <p class="hero__tag">Entrenamiento</p>
+          <h2 class="slide__title">Entrena<br>sin pausa</h2>
+          <a class="btn btn--light" href="#hombre">Ver hombre</a>
+        </div>
+      </article>
+      <article class="slide">
+        <img class="slide__media" src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1400&q=80" srcset="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1400&q=80 1400w, https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=2000&q=80 2000w" sizes="100vw" alt="Zapatillas para mujer" loading="lazy">
+        <div class="slide__text">
+          <p class="hero__tag">Para ella</p>
+          <h2 class="slide__title">Ligeras.<br>Rápidas.<br>Tuyas.</h2>
+          <a class="btn btn--light" href="#mujer">Ver mujer</a>
+        </div>
+      </article>
+      <article class="slide">
+        <img class="slide__media" src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1400&q=80" srcset="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1400&q=80 1400w, https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=2000&q=80 2000w" sizes="100vw" alt="Zapatillas en oferta" loading="lazy">
+        <div class="slide__text">
+          <p class="hero__tag">Solo por temporada</p>
+          <h2 class="slide__title">Hasta 25%<br>de descuento</h2>
+          <a class="btn btn--light" href="#ofertas">Ver ofertas</a>
+        </div>
+      </article>
+      </div>
+      <div class="slider-ui">
+        <div class="dots" id="dots"></div>
+        <div class="arrows"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Siguiente">→</button></div>
+      </div>
+    </section>
+
+    <ul class="perks">
+      <li>🚚 Envío gratis desde S/ 299</li><li>↩ 30 días para devolver</li><li>🔒 Pago seguro</li>
+    </ul>
+
+    <section class="shop" id="tienda">
+      <h2 id="shopTitle">Todo el calzado</h2>
+      <div class="toolbar">
+        <div class="chips" id="chips">
+          <button data-f="todos">Todos</button><button data-f="novedades">Novedades</button>
+          <button data-f="hombre">Hombre</button><button data-f="mujer">Mujer</button>
+          <button data-f="ninos">Niños</button><button data-f="ofertas">Ofertas</button>
+        </div>
+        <input type="search" id="search" placeholder="Buscar zapatillas..." aria-label="Buscar">
+      </div>
+      <p class="count" id="count"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="newsletter">
+      <h2>10% en tu primera compra</h2>
+      <p>Suscríbete y recibe lanzamientos y descuentos.</p>
+      <div class="newsletter__form">
+        <input type="email" placeholder="Tu correo" aria-label="Correo electrónico">
+        <button class="btn">Suscribirme</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VELOZ</span>
+        <p>Calzado deportivo para quienes no se detienen. Envíos a todo el país.</p>
+        <div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a></div>
+      </div>
+      <div class="footer__col"><h4>Comprar</h4><a href="#novedades">Novedades</a><a href="#hombre">Hombre</a><a href="#mujer">Mujer</a><a href="#ninos">Niños</a><a href="#ofertas">Ofertas</a></div>
+      <div class="footer__col"><h4>Ayuda</h4><a href="#">Envíos y entregas</a><a href="#">Cambios y devoluciones</a><a href="#">Guía de tallas</a><a href="#">Contacto</a></div>
+      <div class="footer__col"><h4>Empresa</h4><a href="#">Nosotros</a><a href="#">Tiendas</a><a href="#">Trabaja con nosotros</a><a href="#">Sostenibilidad</a></div>
+    </div>
+    <div class="footer__bar">
+      <p>© 2026 VELOZ. Proyecto académico.</p>
+      <div class="legal"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Libro de reclamaciones</a></div>
+      <div class="pay"><span>Visa</span><span>Mastercard</span><span>Yape</span><span>Plin</span></div>
+      <a class="footer__top" href="#">↑ Volver arriba</a>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito">
+    <div class="drawer__head"><h3>Tu carrito</h3><button class="icon-btn" id="closeCart" aria-label="Cerrar">✕</button></div>
+    <div class="drawer__items" id="cartItems"></div>
+    <div class="drawer__foot"><p>Total <strong id="cartTotal">S/ 0</strong></p><button class="btn" id="checkout">Finalizar compra</button></div>
+  </aside>
+  <script src="js/app.js"></script>
+</body>
+</html>
